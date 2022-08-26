@@ -1,11 +1,16 @@
 <script setup>
-import { ref } from 'vue'
+import { ref,onUnmounted } from 'vue'
 
 defineProps({
   msg: String
 })
 
 const count = ref(0)
+
+onUnmounted(()=>{
+  console.log("组件卸载了");
+})
+
 </script>
 
 <template>
